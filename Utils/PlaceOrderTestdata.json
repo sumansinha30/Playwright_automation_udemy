@@ -1,0 +1,23 @@
+[
+  {
+    "username": "sumanta@gmail.com",
+    "password": "Sumanta123",
+    "productName": "adidas original",
+    "countryInitials": "New",
+    "country": "New Zealand"
+  },
+  {
+    "username": "sumanta@gmail.com",
+    "password": "Sumanta123",
+    "productName": "iphone 13 pro",
+    "countryInitials": "ind",
+    "country": "Indonesia"
+  },
+  {
+    "username": "sumanta@gmail.com",
+    "password": "Sumanta123",
+    "productName": "zara coat 3",
+    "countryInitials": "Ban",
+    "country": "Bangladesh"
+  }
+]

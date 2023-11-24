@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jul 10 18:34:53 IST 2023","Mon Jul 10 18:34:59 IST 2023","5739","chrome","","","","","Abort network calls",""
+"failed","Mon Jul 10 18:15:56 IST 2023","Mon Jul 10 18:16:11 IST 2023","14524","chrome","","","","","Visauls",""
+"passed","Mon Jul 10 18:15:27 IST 2023","Mon Jul 10 18:15:37 IST 2023","9940","chrome","","","","","Client app login",""
+"passed","Mon Jul 10 18:34:53 IST 2023","Mon Jul 10 18:35:03 IST 2023","10427","chrome","","","","","Client app login",""
