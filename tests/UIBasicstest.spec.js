@@ -14,6 +14,7 @@ test("@Web Browser Context Playwright automation", async ({ browser }) => {
   // console.log(await cardTitles.last().textContent());
 
   await page.waitForLoadState("networkidle");
+  // await page.locator(cardTitles).last().waitFor();
   // await Promise.all([page.waitForNavigation()]);
   console.log(await cardTitles.allTextContents());
 });
@@ -39,7 +40,7 @@ test("Page Playwright automation", async ({ page }) => {
   await password.type("learning");
 
   //race condition
-  await Promise.all([page.waitForNavigation(), signin.click()]);
+  await Promise.all([page.waitForEvent(), signin.click()]);
   // await signin.click();
 
   const cardTitles = page.locator(".card-body h4 a");

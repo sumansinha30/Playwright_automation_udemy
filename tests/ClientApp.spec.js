@@ -7,7 +7,7 @@ test.skip("Client app login", async ({ page }) => {
   await page.locator("#userEmail").fill(email);
   await page.locator("#userPassword").type("Sumanta123");
 
-  const productName = "adidas original";
+  const productName = "ADIDAS ORIGINAL";
   await page.locator("[value='Login']").click();
 
   await page.waitForLoadState("networkidle");
@@ -32,12 +32,12 @@ test.skip("Client app login", async ({ page }) => {
   page.locator("div li").first().waitFor();
 
   //   await page.pause();
-  const bool = await page.locator("h3:has-text('adidas original')").isVisible();
+  const bool = await page.locator("h3:has-text('ADIDAS ORIGINAL')").isVisible();
   // console.log(bool);
   expect(bool).toBeTruthy();
 
   await page.locator("text=Checkout").click();
-  await page.locator("[placeholder*='Country']").type("ind", { delay: 100 });
+  await page.locator("[placeholder*='Country']").pressSequentially("ind", { delay: 100 });
 
   const dropdown = await page.locator(".ta-results");
   await dropdown.waitFor();
