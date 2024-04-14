@@ -15,7 +15,7 @@ const orderPayload = {
   orders: [
     {
       country: "British Indian Ocean Territory",
-      productOrderedId: "6262e9d9e26b7e1a10e89c04",
+      productOrderedId: "6581ca399fd99c85e8ee7f45",
     },
   ],
 };
@@ -43,6 +43,6 @@ test("Place an order", async ({ page }) => {
   route => route.continue({url: "https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=649ada517244490f956e77a6"}))
   
   await page.locator("button:has-text('View')").first().click();
-  await page.pause();
+  // await page.pause();
   
 });

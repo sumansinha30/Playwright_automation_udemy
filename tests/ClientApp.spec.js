@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test.skip("Client app login", async ({ page }) => {
+test("Client app login", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/client/");
 
   const email = "sumanta@gmail.com";

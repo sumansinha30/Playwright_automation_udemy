@@ -46,7 +46,7 @@ for (const data of dataset) {
   });
 }
 
-customtest.only("Client app login", async ({ page, testDataForOrder }) => {
+customtest("Client app login", async ({ page, testDataForOrder }) => {
   const poManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   await loginPage.goTo();

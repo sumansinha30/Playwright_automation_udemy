@@ -8,7 +8,7 @@ test.beforeAll(async ({ browser }) => {
   await page.goto("https://rahulshettyacademy.com/client/");
 
   await page.locator("#userEmail").fill(email);
-  await page.locator("#userPassword").type("Sumanta123");
+  await page.locator("#userPassword").fill("Sumanta123");
 
   await page.locator("[value='Login']").click();
   await page.waitForLoadState("networkidle");
@@ -18,7 +18,7 @@ test.beforeAll(async ({ browser }) => {
 });
 
 test("Client app login", async () => {
-  const productName = "adidas original";
+  const productName = "ADIDAS ORIGINAL";
   const page = await webContext.newPage();
   await page.goto("https://rahulshettyacademy.com/client/");
   const products = page.locator(".card-body");
@@ -42,7 +42,7 @@ test("Client app login", async () => {
   page.locator("div li").first().waitFor();
 
   //   await page.pause();
-  const bool = await page.locator("h3:has-text('adidas original')").isVisible();
+  const bool = await page.locator("h3:has-text('ADIDAS ORIGINAL')").isVisible();
   // console.log(bool);
   expect(bool).toBeTruthy();
 

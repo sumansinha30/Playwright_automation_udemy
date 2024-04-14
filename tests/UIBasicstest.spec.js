@@ -27,8 +27,11 @@ test("Page Playwright automation", async ({ page }) => {
   const username = page.locator("#username");
   const password = page.locator("#password");
   const signin = page.locator("#signInBtn");
-  await username.type("Suman");
-  await password.type("98765");
+  // await username.type("Suman");
+  // await password.type("98765");
+
+  await username.fill("Suman");
+  await password.fill("98765");
   await signin.click();
 
   console.log(await page.locator("[style*='block']").textContent());
@@ -37,7 +40,7 @@ test("Page Playwright automation", async ({ page }) => {
   await username.fill("");
   await username.fill("rahulshettyacademy");
   await password.fill("");
-  await password.type("learning");
+  await password.fill("learning");
 
   //race condition
   await Promise.all([page.waitForEvent(), signin.click()]);
@@ -96,7 +99,7 @@ test("child window handle", async ({ browser }) => {
   const email_id = text.split("@")[1].split(" ")[0];
   console.log(email_id);
 
-  await page.locator("#username").type(email_id);
+  await page.locator("#username").fill(email_id);
   // await page.pause();
   console.log(await page.locator("#username").textContent());
 });
@@ -116,11 +119,11 @@ test("Abort network calls", async ({ browser }) => {
   const signin = page.locator("#signInBtn");
   page.on('request', request => console.log(request.url()));
   page.on('response', response => console.log(response.url(), response.status()));
-  await username.type('rahulshettyacademy');
-  await password.type('learning');
+  await username.fill('rahulshettyacademy');
+  await password.fill('learning');
   await signin.click();
 
-  await page.pause();
+  // await page.pause();
 
   
 });
